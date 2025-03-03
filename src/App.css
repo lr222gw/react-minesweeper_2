@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  font-family: monospace;
+  font-weight: lighter;
+}
+
+#gametitle {
+  margin: 0 auto;
+  width: fit-content;
+  display: block;
+  background-color: black;
+  color: green;
+  padding: 8px;
+  border-radius: 5px 5px 0px 0px;
+  border-top: 3px solid rgb(61, 238, 61);
+  border-left: 3px solid rgb(61, 238, 61);
+  border-right: 3px solid rgb(61, 238, 61);
+  box-shadow: 0px 0px 19px rgb(61, 238, 61), inset 0px 0px 8px rgb(61, 238, 61);
+}
+.HUD_Right{
+  display: flex;
+  width: 55px;
+  flex-direction: column;
+  margin-left: auto;
+  
+}
+.HUD_Left{
+  display: flex;
+  width: 155px;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.scoreboardinfo{
+  display: flex;
+  flex-direction: column;
+}
+ .scoreboardinfo span{
+  display: flex;
+  width: fit-content;
+  
+}
+ .scoreboardinfo p{
+  float: right;
+}
+.scoreboardinfo label {
+  display: flex
+;
+  width: max-content;
+  float: left;
+}
+
+div#playtime {
+  background-color: black;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid red;
+  box-shadow: 0px 0px 3px black, inset 0px 0px 20px red;
+  display: flex;
+}
+.timeBoxes {
+  color: white;
+  width: min-content;
+  display: flex;
+  margin: 0 auto;
+  font-family: fantasy;
+  font-size: 40px;
+  margin-top: 0px;
+}
+
+div#FinalScoreBoard h3 {
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+}
+div#FinalScoreBoard {
+  background-color: silver;
+  padding: 10px;
+  width: inherit;
+  border: 2px solid #5a955a;
+  border-radius: 4px;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: 600;
+}
+
+#gamepanel{
+  background-color: green;
+  border-radius: 5px 5px 0px 0px;
+  padding: 10px;
+  width: 150px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  border-left: 3px #444444 solid;
+  border-right: 3px #444444 solid;
+  border-top: 2px #444444 solid;
+  display: flex;
+  min-width: fit-content;
+}
+
+.cell {
+  background-color: silver;
+  height: 100%;
+  display: block;
+  box-shadow: 0px 0px 5px #560000;
+  
+
+}
+.symbol {
+  color: white;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  font-family: monospace;
+  text-shadow: 0px 0px 4px #000000;
+}
+.container {
+  width: max-content;
+  padding: 10px;
+  margin: auto;
+  background-color: #7a7474;
+  display: grid;
+  grid-auto-rows: 35px; /* sets height */
+  gap: 10px; /* gap between cells */
+  border-radius: 10px;
+  border: 5px solid #444444;
+  margin-top: 0px;
+  min-width: 52%;
+  justify-content: center;
+  box-shadow: inset 0px 0px 5px #c3c3c3;
+  
+}
+
+#playtime_flagCounter{
+  float: left;
+  display: flex;
+
+}
+
+#flagsCounter{ 
+  background-color: white;
+  width: max-content;
+  height: min-content;
+  padding: 2px;
+  margin: 5px;
+  border-radius: 2.5px;
+  display: block;
+  font-size: 15px;
+  color: red;
+  white-space: nowrap;
+}
+
+.symbolDiv {
+  display: flex;
+  height: calc(100% - 8px);
+  justify-content: center;
+  background-color: #bd5e2747;
+  align-items: center;
+  margin: 4px;
+}
+.blowUp {
+  animation-name: symbolDivAnim;
+  animation-duration: 1s;
+  /* animation-iteration-count: 1; */
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes symbolDivAnim {
+  0% {scale: 1;}
+  15% {scale: 2;}
+  20% {scale: 2.2;}
+  25% {scale: 2.1;}
+  50% {scale: 1.8;}
+  70% {scale: 1;}
+  80% {scale: 0.7;}
+  95% {scale: 1.05;}
+  100% {scale: 1;}
+}
+
+.swell {
+  animation-name: swell_symbolDivAnim;
+  animation-duration: 0.35s;
+  /* animation-iteration-count: 1; */
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+
+@keyframes swell_symbolDivAnim {
+  0% {scale: 1;}
+  15% {scale: 1.3;}
+  20% {scale: 1.5;}
+  25% {scale: 1.4;}
+  50% {scale: 1.2;}
+  70% {scale: 1;}
+  80% {scale: 0.8;}
+  95% {scale: 1.05;}
+  100% {scale: 1;}
+}
+
+
+.dance {
+  animation-name: dance_symbolDivAnim;
+  animation-duration: 1.5s;
+  /* animation-iteration-count: 1; */  
+  animation-iteration-count: 5; /* infinite; */
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes dance_symbolDivAnim {
+  0% {rotate:  0deg;}
+  25% {rotate: 5deg;}
+  50% {rotate: 0deg;}
+  75% {rotate: -5deg;}
+  100% {rotate: 5deg;}
+}
+
+.spin {
+  animation-name: spin_symbolDivAnim;
+  animation-duration: 0.5s;
+  /* animation-iteration-count: 1; */  
+  animation-iteration-count: 1; /* infinite; */
+  animation-timing-function: ease-in-out;
+}
+@keyframes spin_symbolDivAnim {
+  0% {rotate:  0deg;}
+  /* 25% {rotate: 5deg;} */
+   /* 50% {rotate: 180deg;}  */
+  75% {rotate: 360deg;}
+  100% {rotate: 400deg;}
+}
+
+
+.swell_spin_dance {
+  animation: 
+  swell_symbolDivAnim  0.35s   1  linear,
+  /* dance_symbolDivAnim  0.55s   4  ease-in alternate-reverse, */
+  spin_symbolDivAnim   0.55s   1  ease-in-out alternate-reverse;
+}
+
+@keyframes shake_effects {
+  0% { scale: 1;     rotate:  0deg;       }
+  15% {scale: 1.3;                        }
+  20% {scale: 1.5;                        }
+  25% {scale: 1.4;                        }
+  50% {scale: 1.2;   rotate: 5deg;        }
+  70% {scale: 1;                          }
+  80% {scale: 0.8;                        }
+  95% {scale: 1.05;  rotate: -5deg;       }
+  100% {scale: 1;    rotate:  0deg;       }
+}
+
+@keyframes beatEffect {
+  0% { scale: 1;     rotate:  0deg;       }
+  25% {scale: 1.05;   rotate: 2deg;        }
+  50% {scale: 1.1;   rotate: 0deg;        }
+  75% {scale: 1.05;   rotate: -2deg;        }
+  100% {scale: 1;    rotate:  0deg;       }
+}
+
+.beat {
+  animation: 
+  beatEffect  1.35s   infinite  linear alternate-reverse;
+  /* dance_symbolDivAnim  0.55s   4  ease-in alternate-reverse, */
+  
+}
+
+.shakeEffect {
+  animation: 
+  shake_effects  0.35s   1  linear;
+  /* dance_symbolDivAnim  0.55s   4  ease-in alternate-reverse, */
+  
+}
+
+@keyframes pulseEffect {
+  0% { scale: 1;           }
+  /* 25% {scale: 1.05;         } */
+  50% {scale: 1.15;          }
+  /* 75% {scale: 1.05;         } */
+  100% {scale: 1;          }
+}
+@keyframes pulseOutEffect {
+  0% { scale: 1.1;           }
+  100% {scale: 1;          }
+}
+.resetButton:hover{
+  cursor: pointer;
+}
+.cell:hover {
+  /* animation: pulseEffect 0.35s infinite ease-in-out both; */
+  /* animation-play-state: running; */
+  /* animation-play-state: paused; */
+  /* transition: scale(1.0) 1.3s ease-out 1; */
+  /* animation: pulseEffect 0.35s infinite ease-in-out ; */
+  /* animation-name: pulseEffect;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.35s;
+  animation-iteration-count: infinite; */
+  /* animation: pulseEffect 0.35s infinite ease-in-out ; */
+  z-index: 5;
+  cursor: pointer;
+
+}
+.cellHover {
+
+  animation: pulseEffect 0.35s infinite ease-in-out ;
+  /* transform: scale(1.0);
+  transition: transform 0.3s  ease-out ; */
+  /* animation-play-state: paused */
+  
+  /* animation: pulseOutEffect 0.65s 1 ease-in-out both; */
+}
+
+/* .cell:not(:hover) 
+{
+  animation: none; 
+  transition: scale (1.0); 
+} 
+*/
+
+/* #effects {
+  box-shadow: 0px 0px 60px black, inset 0px 0px 167px black;
+  border-radius: 50%;
+  scale: 1.0;
+} */
+
+
+.square_id {
+  font-size: 8px;
+  color: gray;
+  position: absolute;
+  
+}
